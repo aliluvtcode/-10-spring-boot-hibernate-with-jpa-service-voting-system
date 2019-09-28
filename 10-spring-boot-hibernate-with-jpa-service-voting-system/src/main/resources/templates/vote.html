@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="windows-1256">
+<title>Voting Page</title>
+</head>
+<body>
+<h2>Welcome to vote for better Future</h2>
+<h3>Please insert your name and Pessel code</h3>
+
+<form action="#" th:action="@{/doLogin}" method="post">
+<p>
+Name : 
+<input type="text" name="name" placeholder="Enter your name here"/>
+</p>
+ 
+<p>
+Pessel :
+<input type="text" name="pessel" placeholder="Enter your Pessel here">
+</p>
+
+
+<p>
+<input type="submit" value="Login" />
+</p>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="windows-1256">
+<title>Voting Page</title>
+</head>
+<body>
+<h2>Welcome to vote for better Future</h2>
+ 
+<div th:each="candidate :${candidates}">
+ Click to vote for : 
+<a th:href="@{/voteFor(candidate_id=${candidate.candidate_id})}" th:text=${candidate.candidate_name} onclick="if(!(confirm('Are you sure you want to vote for this Candidates?'))) return false">Choose</a><!-- candidate is the entity name and candidate_id is the column name  -->
+
+</div>
+
+</body>
+</html>
